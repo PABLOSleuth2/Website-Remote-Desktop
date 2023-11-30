@@ -1,0 +1,140 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(140, 140, 140);
+}
+
+.loginmenu .hidden {
+  display: none;
+}
+
+.loginmenu .hidden {
+  background-color: #ffcccc;
+}
+
+.loginmenu .hidden {
+  color: #ff0000;
+  margin: 0;
+}
+
+
+.loginmenu {
+  width: 500px;
+  height: 600px;
+  background: rgb(59, 61, 58);
+  
+}
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    
+.loginmenu h1 {
+  font-family: Montserrat;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.loginmenu input {
+  width: 98%;
+  height: 9%;
+  margin: 18px 0;
+  border-radius: 10px;
+  background-color: rgb(16, 16, 16);
+  color: rgb(189, 191, 190);
+  border: none;
+  font-family: Open Sans;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem transparent;
+  position: relative;
+  left: 5px;
+}
+
+.loginmenu button {
+width: 98%;
+  height: 8%;
+  border-radius: 10px;
+  color: rgb(189, 191, 190);
+  background-color: rgb(59, 61, 58);
+  font-family: Open Sans;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 0.1rem rgb(189,191,191);
+  margin: 10px 0;
+  position: relative;
+  left: 5px;
+}
+
+.loginmenu input:active,
+.loginmenu input:focus {
+  box-shadow: 0 0 0 0.1rem #ffffff; /* Set the box shadow to white or any other desired color */
+}
+
+.loginmenu button:active {
+  background-color: rgba(55, 107, 130, 0.5); /* Set your cyan transparent color */
+}
+
+.loginmenu button:not(:active) {
+  transition: background-color 0.00001s; /* Reset transition for a smooth effect */
+  background-color: #yournormalcolor; /* Set your normal background color */
+}
+
+.loginmenu .box {
+  border-color: rgb(111, 113, 111);
+}
+
+.loginmenu .forgot {
+  color: rgb(255, 255, 255);
+    font-family: Open Sans;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loginmenu .line {
+   color: rgb(189, 191, 190);
+   text-align: center;
+}
+
+.loginmenu .don {
+   color: rgb(189, 191, 190);
+   font-family: Open Sans;
+  font-weight: bold;
+  position: relative;
+  left: 70px;
+  bottom: 10px;
+  font-size: 15px;
+}
+
+
+.loginmenu a {
+  color: #ffffff; /* White color */
+  text-decoration: none; /* Optional: Remove underline */
+}
+
+.loginmenu a:hover {
+  color: #808080; /* Gray color on hover */
+}
+
+.loginmenu .signup {
+      color: rgb(189, 191, 190);
+   font-family: Open Sans;
+  font-weight: bold;
+  position: relative;
+  left: 240px;
+  bottom: 41px;
+  font-size: 15px;
+}
