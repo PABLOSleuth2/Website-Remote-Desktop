@@ -41,7 +41,25 @@ function welcome() {
   function showFakeError() {
   // Show error after 5 seconds
   setTimeout(() => {
-    const errorContainer = document.getElementById('errorContainer');
-    hidden.style.display = 'flex';
+    const errorContainer = document.querySelector('.hidden');
+    errorContainer.style.display = 'block';
   }, 5000);
+}
+
+
+function validateLogin() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var errorContainer = document.querySelector('.hidden');
+
+  if (username.trim() === '' || password.trim() === '') {
+    // Either username or password is empty
+    errorContainer.style.display = 'block';
+  } else {
+    // Both username and password are filled, attempt login
+    // Add your login logic here, for now, let's just show an alert
+    setTimeout(function () {
+                alert("Error: Couldn't connect to remote desktop. Lost connection. Please try again later.");
+            }, 5000);
+  }
 }

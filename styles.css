@@ -11,18 +11,16 @@ body {
 }
 
 .loginmenu .hidden {
-  background-color: #ffcccc;
-}
-
-.loginmenu .hidden {
   color: #ff0000;
-  margin: 0;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Open Sans;
 }
 
 
 .loginmenu {
-  width: 500px;
-  height: 600px;
+  width: 600px;
+  height: 700px;
   background: rgb(59, 61, 58);
   
 }
