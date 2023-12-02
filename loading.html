@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<script src="script1.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no">
+    <style>
+        body {
+            background-color: rgb(140, 140, 140);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.querySelector('video');
+
+            // Handle click event to toggle play/pause
+            video.addEventListener('click', function () {
+                if (video.paused) {
+                    // we dont need pause
+                } else {
+                  // we dont need pause
+                }
+            });
+        });
+    </script>
+</head>
+<body oncontextmenu="return false" onload="welcome3()">
+
+<video id="myVideo" muted playsinline poster="noposter">
+    <source src="loadingrblxstudio.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<center>
+<img id="customImage" style="display: none; width: 60%;" src="rblx.jpg" alt="Custom Image">
+</center>
+<script>
+    var video = document.getElementById("myVideo");
+    var customImage = document.getElementById("customImage");
+
+    // Function to start the video after 3 seconds
+    function startVideo() {
+        video.play();
+    }
+
+    // Set a timeout to start the video after 3 seconds
+    setTimeout(startVideo, 6000); // 3000 milliseconds (3 seconds)
+
+    video.addEventListener('ended', function () {
+        setTimeout(function () {
+            video.style.display = "none";
+            customImage.style.display = "block";
+            // Change the source of the image dynamically if needed
+            // customImage.src = "new-custom-image.jpg";
+        }, 5000); // 5000 milliseconds (5 seconds)
+
+        setTimeout(function () {
+            // Redirect to another HTML page
+            window.location.href = "fakeerror.html";
+        }, 10000); // 10000 milliseconds (10 seconds) after video ends
+    });
+</script>
+
+</body>
+</html>
