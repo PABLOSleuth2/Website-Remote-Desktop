@@ -106,7 +106,15 @@ function validateLogin2() {
     // Both username and password are filled, attempt login
     // Add your login logic here, for now, let's just show an alert
             setTimeout(function () {
-                window.location.href = 'fakeerror.html';
+                window.location.href = 'whatgames.html';
             }, 7000); // 7000 milliseconds = 7 seconds
   }
+}
+
+function validateLogin3() {
+    // Both username and password are filled, attempt login
+    // Add your login logic here, for now, let's just show an alert
+            setTimeout(function () {
+                window.location.href = 'fakeerror.html';
+            }, 7000); // 7000 milliseconds = 7 seconds
 }
