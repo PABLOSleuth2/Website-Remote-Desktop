@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no">
+    <style>
+        body {
+            background-color: rgb(255, 255 ,255);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.querySelector('video');
+
+            // Handle click event to toggle play/pause
+            video.addEventListener('click', function () {
+                if (video.paused) {
+                    // we dont need pause
+                } else {
+                  // we dont need pause
+                }
+            });
+
+            // Function to change background color after 2 seconds
+            setTimeout(changeBackgroundColor, 2000);
+
+            function changeBackgroundColor() {
+                document.body.style.backgroundColor = "rgb(54, 54, 54)";
+            }
+        });
+    </script>
+</head>
+<body oncontextmenu="return false" onload="welcome()">
+
+<video id="myVideo" muted playsinline poster="noposter">
+    <source src="instudio.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<center>
+<img id="customImage" style="display: none; width: 60%;" src="rblx.jpg" alt="Custom Image">
+</center>
+<script>
+    var video = document.getElementById("myVideo");
+    var customImage = document.getElementById("customImage");
+
+    // Function to start the video after 3 seconds
+    function startVideo() {
+        video.play();
+    }
+
+    // Set a timeout to start the video after 3 seconds
+    setTimeout(startVideo, 6000); // 3000 milliseconds (3 seconds)
+
+    video.addEventListener('ended', function () {
+    });
+</script>
+
+</body>
+</html>
