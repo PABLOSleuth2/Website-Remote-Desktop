@@ -96,10 +96,9 @@ function validateLogin() {
 
 function validateLogin2() {
   var username = document.getElementById('gmail').value;
-  var password = document.getElementById('gmail2').value;
   var errorContainer = document.querySelector('.hidden');
 
-  if (username.trim() === '' || password.trim() === '') {
+  if (username.trim() === '') {
     // Either username or password is empty
     errorContainer.style.display = 'block';
     } else if (username.length > 20) {
@@ -108,7 +107,7 @@ function validateLogin2() {
     // Both username and password are filled, attempt login
     // Add your login logic here, for now, let's just show an alert
             setTimeout(function () {
-                window.location.href = 'whatgames.html';
+                window.location.href = 'instudio.html';
             }, 7000); // 7000 milliseconds = 7 seconds
   }
 }
